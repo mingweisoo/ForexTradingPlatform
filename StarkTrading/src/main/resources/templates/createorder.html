@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create Order Choice</title>
+<link rel ="stylesheet" th:href="@{/createorderchoice.css}"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <a href="#" class="pull-left"><img src="/logo-no-background.png" height = "80" width = "80" style="display: inline-block;"></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		<ul class ="nav navbar-nav menu">
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/dashboard}"> Dashboard <span class="sr-only">(current)</span></a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link active" th:href="@{/orders}"> Orders </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/wallet}"> Wallet </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/rates}"> Rates </a>
+  			</li>
+  			<li class="nav-item" >
+  				<a class="nav-link logout" th:href="@{/login}"> Log Out </a>
+  			</li>
+  		</ul>
+  	</div>
+</nav>
+
+<!-- 	<div class = "row justify-content-center"> -->
+<!-- 		<div class = "col col-md-5"> -->
+<!-- 			<h1>Please select which type of trade do you wish to make today:</h1> -->
+<!-- 				<form method="get" action="/orders/createorder/spot"> -->
+<!-- 		<input class="btn btn-success" type="submit" value="Spot"> -->
+<!-- 	</form> -->
+<!-- 	<form method="get" action="/orders/createorder/limit"> -->
+<!-- 		<input class="btn btn-success" type="submit" value="Limit"> -->
+<!-- 	</form> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+	
+	<div align ="center">
+		<br>
+		<h1>Please select which type of trade do you wish to make today</h1>
+		<hr>
+	<div class="row">
+    <div class="container">
+        <div class="jumbotron text-center col-md-6">
+            <h1>Spot Market</h1>
+            <p>Buy or sell the currency pair at the current market rate</p>
+			<form method="get" action="/orders/createorder/spot">
+				<input class="btn btn-success" type="submit" value="Trade Spot">
+			</form>
+        </div>
+        <a>  </a>
+
+        <div class="jumbotron text-center col-md-6">
+            <h1>Limit Market</h1>
+            <p>Set the minimum or maximum price of currency you would like to buy or sell</p>
+			<form method="get" action="/orders/createorder/limit">
+				<input class="btn btn-success" type="submit" value="Trade Limit">
+			</form>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

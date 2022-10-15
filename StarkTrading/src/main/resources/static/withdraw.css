@@ -1,0 +1,47 @@
+.navbar-dark {
+	background: red;
+	padding: 20px;
+	border-style: none;
+}
+.nav-link{
+    padding: 8px;
+    color: #fff;
+    font-weight: 400;
+}
+.navbar-dark .navbar-nav .nav-link.active, 
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #333;
+    background-color: #c0c0c0;
+    border-radius: 8px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255, 1);
+}
+
+.navbar-brand {
+	font-size: 30px;
+	font-family: Arial;
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.nav li:active {
+	background-color: #D65108 !important;
+}
+
+.nav li {
+	margin-left: 10px
+}
+
+body .nav>.active>a {
+	background-color: #EFA00B
+}
+
+.nav li:hover {
+	background-color: #003EBA;
+	border-radius: 10px
+}
+.nav-item-right {
+  float: right;
+}

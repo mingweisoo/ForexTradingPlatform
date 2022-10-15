@@ -1,0 +1,43 @@
+
+body#IndexMain {
+	background-image:
+		url("../background.png");
+	background-repeat: no-repeat;
+	background-position: 10% 0%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+}
+
+.space {
+  width: 150px;
+  height: auto;
+  display: inline-block;
+}
+
+.button {
+  background-color: #ff0000; /* red */
+  border: none;
+  color: yellow;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;	
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #ff0000; /* red */
+  color: white;
+}

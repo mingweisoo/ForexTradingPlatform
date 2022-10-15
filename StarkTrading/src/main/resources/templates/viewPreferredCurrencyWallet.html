@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Viewed Preferred Currency Portfolio</title>
+<link rel ="stylesheet" th:href="@{/withdraw.css}"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <a href="#" class="pull-left"><img src="logo-no-background.png" height = "80" width = "80" style="display: inline-block;"></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		<ul class ="nav navbar-nav menu">
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/dashboard}"> Dashboard <span class="sr-only">(current)</span></a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/orders}"> Orders </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/wallet}"> Wallet </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/rates}"> Rates </a>
+  			</li>
+  			<li class="nav-item" >
+  				<a class="nav-link logout" th:href="@{/Login}"> Log Out </a>
+  			</li>
+  		</ul>
+  	</div>
+</nav>
+
+	<div class ="container my-2">
+		<h1>Portfolio</h1>
+		<hr>
+	
+	<table border="1" class = "table table-striped table-responsice-md">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Currency</th>
+					<th>Amount</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="wallet : ${listOfWallets}">
+					<td th:text="${wallet.walletId}"></td>
+					<td th:text="${wallet.currency}"></td>
+					<td th:text="${wallet.amount}"></td>
+				</tr>
+				<tr>
+				<td th:text="Total"></td>
+				<td th:text="${baseCurrency}"></td>
+				<td th:text="${totalValueOfPortfolio}"></td>
+				</tr>
+			</tbody>
+		</table>
+	<a th:href="@{/dashboard}" class = "btn btn-dark btm-sm mb-3" >Back</a>
+	</div>
+	<br><br><br>
+	
+
+</body>
+</html>

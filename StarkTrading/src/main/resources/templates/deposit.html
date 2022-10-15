@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"><head>
+<meta charset="UTF-8">
+<title>deposit</title>
+<link rel ="stylesheet" th:href="@{/withdraw.css}"/>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body id = "">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <a href="#" class="pull-left"><img src="logo-no-background.png" height = "80" width = "80" style="display: inline-block;"></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  		<ul class ="nav navbar-nav menu">
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/dashboard}"> Dashboard <span class="sr-only">(current)</span></a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/orders}"> Orders </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link active" th:href="@{/wallet}"> Wallet </a>
+  			</li>
+  			<li class="nav-item">
+  				<a class="nav-link" th:href="@{/rates}"> Rates </a>
+  			</li>
+  			<li class="nav-item" >
+  				<a class="nav-link logout" th:href="@{/login}"> Log Out </a>
+  			</li>
+  		</ul>
+  	</div>
+</nav>
+
+<!--
+	<form:options items="${currencies}"> 
+	<input type = "text", name = "amount">
+	<input type = "submit" value = "Deposit">
+	</form>
+ -->
+ 
+ <div align ="center">
+	<br>
+	<h1>Deposit</h1>
+	<hr>
+	<form method="post" action="deposit">
+		<select name="currency">
+		<option th:each="currency : ${currencies}" th:value="${currency}" th:text="${currency}"></option>
+		</select>
+		<input type = "text", name = "amount">
+		<br>
+<!-- 	<input type = "submit" value = "Deposit"> -->
+		<br>
+		<button type="submit" style="cursor:pointer" class = "btn btn-dark btm-sm mb-3">Submit</button>
+	</form>
+</div>
+
+
+</body>
+</html>
